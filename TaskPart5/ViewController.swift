@@ -26,10 +26,40 @@ class ViewController: UIViewController {
 
         if textFieldNum1 == nil {
             print("割られる数を入力してください")
+            //アラートを作成
+            let title = "課題5"
+            let message = "割られる数を入力してください"
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+            //OKボタンを作成&追加
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+
+            present(alert, animated: true, completion: nil)
+            alert.addAction(ok)
         } else if textFieldNum2 == nil {
             print("割る数を入力してください")
+            //アラートを作成
+            let title = "課題5"
+            let message = "割る数を入力してください"
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+            //OKボタンを作成&追加
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+
+            present(alert, animated: true, completion: nil)
+            alert.addAction(ok)
         } else if textFieldNum2 == 0 {
             print("割る数には、0を入力しないでください")
+            //アラートを作成
+            let title = "課題5"
+            let message = "割る数には、0を入力しないでください"
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+
+            //OKボタンを作成&追加
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+
+            present(alert, animated: true, completion: nil)
+            alert.addAction(ok)
         } else {
             print("計算")
             let result = textFieldNum1! / textFieldNum2!
@@ -37,6 +67,7 @@ class ViewController: UIViewController {
             label.text = String(resultRound)
             print(resultRound)
         }
+
     }
 
 }
