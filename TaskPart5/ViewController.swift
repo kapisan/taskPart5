@@ -17,37 +17,25 @@ class ViewController: UIViewController {
 
         let textFieldNum1 = Double(textField1.text!)
         let textFieldNum2 = Double(textField2.text!)
+        let title = "課題5"
+        //OKボタンを作成&追加
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
 
         if textFieldNum1 == nil {
             //アラートを作成
-            let title = "課題5"
-            let message = "割られる数を入力してください"
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-
-            //OKボタンを作成&追加
-            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let alert = UIAlertController(title: title, message: "割られる数を入力してください", preferredStyle: .alert)
 
             present(alert, animated: true, completion: nil)
             alert.addAction(ok)
         } else if textFieldNum2 == nil {
             //アラートを作成
-            let title = "課題5"
-            let message = "割る数を入力してください"
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-
-            //OKボタンを作成&追加
-            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let alert = UIAlertController(title: title, message: "割る数を入力してください", preferredStyle: .alert)
 
             present(alert, animated: true, completion: nil)
             alert.addAction(ok)
         } else if textFieldNum2 == 0 {
             //アラートを作成
-            let title = "課題5"
-            let message = "割る数には、0を入力しないでください"
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-
-            //OKボタンを作成&追加
-            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let alert = UIAlertController(title: title, message: "割る数には、0を入力しないでください", preferredStyle: .alert)
 
             present(alert, animated: true, completion: nil)
             alert.addAction(ok)
